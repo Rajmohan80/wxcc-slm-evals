@@ -1,0 +1,16 @@
+# environment
+.venv-eval/
+__pycache__/
+*.pyc
+*.pyo
+
+# run files (large, contain full pipeline output — not committed)
+results/run_*.jsonl
+results/run_*.jsonl.bak
+
+# secrets
+.env
+
+# OS
+.DS_Store
+Thumbs.db
