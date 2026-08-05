@@ -10,7 +10,7 @@ This is my answer to that question.
 
 ## What I did
 
-I wrote 34 test questions based on topics I know well from 18 years of Cisco Contact Center work — data residency rules, deployment models for India, EU compliance requirements, capacity limits, and so on.
+I wrote 34 test questions based on topics drawn from extensive experience in Cisco Collaboration — data residency rules, deployment models for India, EU compliance requirements, capacity limits, and so on.
 
 For each question I wrote the correct answer myself, sourced from real Cisco documents. Then I ran all 34 questions through the AI and measured how well it did.
 
@@ -25,21 +25,21 @@ The tool I used to measure is called RAGAS. It scores AI answers on four things:
 
 ## What I found
 
-The AI scored well on retrieval — it was pulling the right documents 94% of the time. It answered relevantly about 72% of the time, which is lower, mainly because the system is designed to give structured consulting answers with context and risk notes, and the scoring tool prefers shorter direct answers. That's a known trade-off I documented.
+The AI scored well on retrieval — it was pulling the right documents 94% of the time. It answered relevantly about 72% of the time, which is lower, mainly because the system is designed to give structured consulting answers with context and risk notes, and the scoring tool prefers shorter direct answers. That is a known trade-off I documented.
 
 The most important test was the 7 trick questions I included. These were designed to catch the AI making things up or going along with false information:
 
-- I asked about pricing for Brazil (not in the corpus) — it said it didn't know and suggested contacting Cisco directly. ✅
-- I asked it to confirm that WxCC runs on GCP — it corrected me and said AWS. ✅
-- I asked it to confirm the US data centre is in Oregon — it corrected me and said N. Virginia. ✅
-- I asked it to design emotion-sensing dashboards for a German call centre — it refused and cited EU law. ✅
-- I asked about China deployment — it gave a hard stop. ✅
-- I asked about WebRTC for Indian domestic agents — it corrected the false premise. ✅
-- I asked for Salesforce Apex code — it said that's outside what it knows. ✅
+- Pricing for Brazil (not in the corpus) — correctly stated it did not know ✅
+- WxCC runs on GCP (false) — correctly stated AWS ✅
+- US data centre is Oregon (false) — correctly stated N. Virginia ✅
+- Design emotion-sensing dashboards for a German call centre — refused and cited EU law ✅
+- China deployment — hard stop ✅
+- WebRTC for Indian domestic agents (false premise) — correctly rejected ✅
+- Salesforce Apex code — correctly stated outside its knowledge scope ✅
 
-7 out of 7. The AI didn't make things up when it didn't know, and it pushed back when given wrong information.
+7 out of 7. The AI did not make things up when it did not know, and it pushed back when given wrong information.
 
-I also ran the same test with a different retrieval setting (fetching 5 documents instead of 8) to see if that improved things. It didn't — precision dropped. So 8 is the right setting for this corpus.
+I also ran the same test with a different retrieval setting (fetching 5 documents instead of 8) to see if that improved things. It did not — precision dropped. So 8 is the right setting for this corpus.
 
 ---
 
@@ -54,7 +54,7 @@ I also ran the same test with a different retrieval setting (fetching 5 document
 
 ---
 
-## What's in this repo
+## What is in this repo
 
 ```
 golden_set/     the 34 test questions and correct answers
@@ -68,7 +68,7 @@ SETUP.md        how to reproduce this evaluation yourself
 
 ## How to read the test questions
 
-Open `golden_set/wxcc_golden_v1.md` — it has all 34 questions with the correct answers and the Cisco source document each answer came from. You can read it like a study guide for WxCC.
+Open `golden_set/wxcc_golden_v1.md` — it has all 34 questions with the correct answers and the Cisco source document each answer came from.
 
 ---
 
